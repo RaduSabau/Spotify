@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 
 public class SpotifyLoginPage {
     WebDriver driver;
@@ -18,7 +17,8 @@ public class SpotifyLoginPage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
-    public void continueWithGoogle(){
+
+    public void continueWithGoogle() {
         wait.until(ExpectedConditions.elementToBeClickable(continueWithGoogleButton));
         WebElement continueWithGoogleElement = driver.findElement(continueWithGoogleButton);
         continueWithGoogleElement.click();
